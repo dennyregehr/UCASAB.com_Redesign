@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sab_calendar" Class="sab_boardDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\sab_calendar.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="sab_calendarConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Calendar" Member="Calendars">
+    <Type Name="Calendar">
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EventTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EventDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="imageURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="videoURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="audioURL1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="audioURL2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="EventType_Calendar" Member="EventType" ThisKey="EventTypeID" OtherKey="eventTypeID" Type="EventType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventType" Member="EventTypes">
+    <Type Name="EventType">
+      <Column Name="eventTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="EventType_Calendar" Member="Calendars" ThisKey="eventTypeID" OtherKey="EventTypeID" Type="Calendar" />
+    </Type>
+  </Table>
+</Database>

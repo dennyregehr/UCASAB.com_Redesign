@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="sab_calendar">
+  <DataContextMoniker Name="/sab_calendarDataContext" />
+  <nestedChildShapes>
+    <classShape Id="73739e7c-d685-4176-8fe4-6176f0b33496" absoluteBounds="3.5, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/sab_calendarDataContext/ExecBoard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15ab854a-e69f-408d-8564-e803f8206b84" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0178a102-89b3-4632-a6a2-d209a2a14fda" absoluteBounds="0.75, 1.375, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/sab_calendarDataContext/ExecPosition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ae1e86e-353f-43ae-a1b7-be88ff0fb9ea" absoluteBounds="0.765, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.35659912109375); (3.5 : 2.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sab_calendarDataContext/ExecPosition/ExecPosition_ExecBoard" />
+      <nodes>
+        <classShapeMoniker Id="0178a102-89b3-4632-a6a2-d209a2a14fda" />
+        <classShapeMoniker Id="73739e7c-d685-4176-8fe4-6176f0b33496" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

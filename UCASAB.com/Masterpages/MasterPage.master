@@ -1,0 +1,73 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="Masterpages_MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>UCA Student Activities Board - Fun Lives Here!</title>
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1" type="text/javascript"></script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script type="text/javascript">window.fbAsyncInit = function () {FB.init({ appId: '108554585871488', status: true, cookie: true, xfbml: true});}</script>
+    <form id="form1" runat="server">
+    <%--outer container--%>
+    <div id="OuterContainer">
+        <%--top Container--%>
+        <div id="TopContainer">
+            <div style="background-image:url(/images/ucaBgTop1.png);">
+                <h1>UCA Student Activities Board - Fun Lives Here!</h1>
+                <div id="siteSlogan">
+                    <asp:Image runat="server" ImageUrl="~/Images/sab_FunLivesHere7.png" AlternateText="Fun Lives Here!" />
+                </div>
+                <div id="siteLogo">
+                    <asp:Image runat="server" ImageUrl="~/Images/sab_logo9.png" AlternateText="UCA Student Activities Board" />
+                </div>
+            </div>
+        </div>
+        <%--divider line--%>
+        <div id="DividerLineContainer">
+            <div id="DividerLineContent">
+                <div id="DividerLineTabs">
+                    <span class="sabTabs"><a href="/Default.aspx">Home</a></span>
+                    <span class="sabTabs"><a href="/Calendar.aspx">Calendar</a></span>
+                    <span class="sabTabs"><a href="/Join.aspx">Join SAB</a></span>
+                    <span class="sabTabs"><a href="/Contact.aspx">Contact Us</a></span>
+                    <span class="sabTabs"><a href="/ExecBoard.aspx">Execs</a></span>
+                </div>
+                <div id="SocialIcons">
+                    <a href="http://www.twitter.com/ucasab"><img src="/images/iconTwitter.png" alt="Twitter" /></a>
+                    <a href="http://www.ucasab.com/rss.aspx"><img src="/images/iconRSS.png" alt="RSS Feed" /></a>
+                    <a href="http://www.facebook.com/ucasab"><img src="/images/iconFacebook.png" alt="Facebook" /></a>
+                </div>
+            </div>
+        </div>
+        <%--main Container--%>
+        <div id="MainContainer">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <%--bottom Container--%>
+        <%--<div id="BottomToolbarWrap">--%>
+            <div id="BottomContainer">
+                <div id="BottomContainerContent">
+                    <a href="Privacy.aspx">privacy statement</a> 
+                    <a href="Join.aspx">join us!</a>
+                    <a href="Contact.aspx">contact us</a>
+                </div>
+            </div>
+        <%--</div>--%>
+    </div>
+    </form>
+
+    <asp:ContentPlaceHolder id="foot" runat="server"></asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3978091-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();</script>
+
+</body>
+</html>

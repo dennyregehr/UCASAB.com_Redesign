@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sab_calendar" Class="sab_calendarDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\sab_calendar.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="sab_calendarConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ExecBoard" Member="ExecBoards">
+    <Type Name="ExecBoard">
+      <Column Name="execID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="phone1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="phone2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="position" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="photoURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="serviceDates" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ExecPosition_ExecBoard" Member="ExecPosition" ThisKey="position" OtherKey="execPositionID" Type="ExecPosition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExecPosition" Member="ExecPositions">
+    <Type Name="ExecPosition">
+      <Column Name="execPositionID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RelevanceOrder" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="OrderForExecBoardPage" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="ExecPosition_ExecBoard" Member="ExecBoards" ThisKey="execPositionID" OtherKey="position" Type="ExecBoard" />
+    </Type>
+  </Table>
+</Database>

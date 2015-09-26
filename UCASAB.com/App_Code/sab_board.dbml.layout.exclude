@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="sab_board">
+  <DataContextMoniker Name="/sab_boardDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b4adae60-ecef-460a-a212-be15ef541130" absoluteBounds="3.5, 1, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/sab_boardDataContext/Calendar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83debb19-6ed2-468e-86db-047bbb3aaed7" absoluteBounds="3.515, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4203e063-5f0e-42da-a122-6d5c42170c98" absoluteBounds="0.75, 2.25, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/sab_boardDataContext/EventType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d0757bc-8148-4ebf-a771-868a4917f3f1" absoluteBounds="0.765, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.84699625651042); (3.5 : 2.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sab_boardDataContext/EventType/EventType_Calendar" />
+      <nodes>
+        <classShapeMoniker Id="4203e063-5f0e-42da-a122-6d5c42170c98" />
+        <classShapeMoniker Id="b4adae60-ecef-460a-a212-be15ef541130" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

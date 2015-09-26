@@ -1,0 +1,266 @@
+<STYLE type="text/css">
+<!--
+body {
+	background-color: DDDDDD;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin: 0px;
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+}
+font {
+	font-family: Verdana, arial;
+	font-size: 10px;
+	color: 000000;
+}
+select {
+	background-color : #FFFFF0;
+	padding-top : 0;
+	padding-bottom : 0;
+	padding-left : 2;
+	font-family: Verdana,arial;
+	font-size: 10px;
+}
+.DB2ASPTopBar1 {
+	background-color: #003366;
+	color: ffffff;
+	font-family: Verdana,arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+.DB2ASPTopBar2 {
+	background-color: #999999;
+	color: ffffff;
+	font-family: Verdana,arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+.DB2ASPATop:link {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: ffffff;
+}
+.DB2ASPATop:visited {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: ffffff;
+}
+.DB2ASPATop:hover {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.DB2ASPAMenu:link {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+}
+.DB2ASPAMenu:visited {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+}
+.DB2ASPAMenu:hover {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: CC0000;
+}
+.DB2ASPTDSideMenu {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+	background-color: DDDDDD;
+}
+.DB2ASPmainbody {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+	background-color: DDDDDD;
+}
+.DB2ASPdarkI {
+	border-style: inset;
+	border-width : 2;
+	background-color : CCCCCC;
+	padding-top : 0;
+	padding-bottom : 0;
+	height : 18px;
+	padding-left : 3;
+	font: 10px;
+}
+.DB2ASPlightI {
+	border-style: inset;
+	border-width : 2;
+	background-color : FFFFFF;
+	padding-top : 0;
+	padding-bottom : 0;
+	height : 18px;
+	padding-left : 2;
+	font: 10px;
+}
+.inputtext {
+	border-style: solid;
+	border-width :1;
+	background-color : #FFFFF0;
+	padding-top : 0;
+	padding-bottom : 0;
+	height : 18px;
+	padding-left : 2;
+}
+.DB2ASPdarkA {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: FFFFFF;
+}
+.DB2ASPdarkA:hover {
+	color: red;
+}
+.DB2ASPlightA {
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+}
+.DB2ASPlightA:hover {
+	color: red;
+}
+TABLE.DB2ASP {
+	BACKGROUND-COLOR: 000000;
+}
+TD.DB2ASPdark {
+	background-color: 808080;
+	padding-right: 2px;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: FFFFFF;
+}
+TD.DB2ASPlight {
+	background-color: FFFFFF;
+	padding-right: 2px;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Verdana,arial;
+	font-size: 10px;
+	color: 000000;
+}
+TH.DB2ASPdark {
+	background-color: 808080;
+	font-family: Verdana,arial;
+	COLOR: FFFFFF;
+	padding-right: 4px;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 10px;
+	font-weight: bold
+}
+.DB2ASPactionbtn  {
+	border-bottom:thin solid Black;
+	border-right:thin solid Black;
+	border-top:thin solid white;
+	border-left:thin solid white;
+	font-size: 10px;
+	font-family:Verdana,arial;
+	font-weight:bold;
+	background-color: 808080;
+	color: FFFFFF;
+	padding-top: 1px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	cursor: hand;
+}
+.DB2ASPotherbtn   {
+	border-bottom:thin solid Black;
+	border-right:thin solid Black;
+	border-top:thin solid white;
+	border-left:thin solid white;
+	font-size: 10px;
+	font-family: Verdana,arial;
+	font-weight:bold;
+	background-color: 808080;
+	color:FFFFFF;
+	padding-top: 1px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	cursor: hand;
+}
+.DB2ASPdetailcellbg   {
+	font-size: 10px;
+	font-family: Verdana,arial;
+	background-color: #DDDDDD;
+	padding: 4px;
+	color:000000;
+}
+.DB2ASPdetailinput {
+	background-color : #FFFFF0;
+	padding-top : 0;
+	padding-bottom : 0;
+	padding-left : 2;
+	font-family: Verdana,arial;
+	font-size: 10px;
+}
+.DB2ASPnormal {
+	font-family: Verdana, arial, helvetica;
+	font-size: 10px;
+	color: 000000;
+}
+.DB2ASPerror {
+	font-family: Verdana, arial, helvetica;
+	font-size: 10px;
+	font-weight: bold;
+	color:red;
+}
+.DB2ASPmessage {
+	font-family: Verdana, arial, helvetica;
+	font-size: 10px;
+	font-weight: bold;
+	color:green;
+}
+.DB2ASPtitle {
+	font-family: Verdana, arial, helvetica;
+	font-size: 16px;
+	font-weight: bold;
+	color: 000000;
+}
+.DB2ASPsmall {
+	font-family: Verdana, arial, helvetica;
+	font-size: 9px;
+	color: FFFFFF;
+}
+.DB2ASPrequired {
+	font-family: Verdana, arial, helvetica;
+	font-size: 9px;
+	font-weight: bold;
+	color:red;
+}
+.DB2ASPname {
+	font-family: Verdana, arial, helvetica;
+	font-weight: bold;
+	font-size: 10px;
+	color: FFFFFF;
+}
+.DB2ASPvalue {
+	font-family: Verdana, arial, helvetica;
+	font-size: 10px;
+	color: 000000;
+}
+.DB2ASPheader {
+	font-family: Verdana, arial, helvetica;
+	font-size: 12px;
+	color: FFFFFF;
+}
+.DB2ASPhighlight {
+	color: FFFF99;
+}
+-->
+</STYLE>
