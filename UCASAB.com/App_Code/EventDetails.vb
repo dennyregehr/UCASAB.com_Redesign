@@ -235,7 +235,7 @@ Public Class EventDetails
             Case EventTypes.Music
                 Return "music"
             Case EventTypes.Films
-                Return "films"
+                Return "movies"
             Case EventTypes.Novelty
                 Return "novelty"
             Case Else   'EventTypes.PopCulture

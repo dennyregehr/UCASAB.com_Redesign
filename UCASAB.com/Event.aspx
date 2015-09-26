@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Masterpages/MasterPage.master" AutoEventWireup="false" CodeFile="Event.aspx.vb" Inherits="SABEvent" %>
 
-<%@ Register src="UserControls/EventDetailControl.ascx" tagname="EventDetailControl" tagprefix="uc1" %>
+<%@ Register src="~/UserControls/EventDetailControl.ascx" tagname="EventDetailControl" tagprefix="uc1" %>
 <%@ Register Src="~/UserControls/SocialMetaTags.ascx" TagName="SocialMetaTags" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControls/ChairBoxLinks.ascx" TagName="ChairBoxLinks" TagPrefix="uc3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <uc2:SocialMetaTags ID="SocialMetaTags1" runat="server" />
@@ -17,13 +18,7 @@
         <div style="clear:both;min-height:0px;"></div>
     </div>
 
-    <div id="ChairBoxLinks">
-        <div class="ChairBoxLink" onclick="window.location='music.aspx'" style="background-image:url(Images/Music170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='movies.aspx'" style="background-image:url(Images/Film170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='comedy.aspx'" style="background-image:url(Images/Comedy170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='popculture.aspx'" style="background-image:url(Images/pop-culture170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='novelty.aspx'" style="background-image:url(Images/novelty170.png);"></div>
-    </div>
+    <uc3:ChairBoxLinks ID="ChairBoxLinksControl1" runat="server"/>
     <div style="clear:both;min-height:50px;"></div>
 
 </asp:Content>

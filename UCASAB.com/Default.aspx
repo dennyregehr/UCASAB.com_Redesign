@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Masterpages/MasterPage.master" AutoEventWireup="false" 
         CodeFile="Default.aspx.vb" Inherits="_Default" EnableViewState="false" %>
 
+<%@ Register Src="~/UserControls/ChairBoxLinks.ascx" TagPrefix="uc1" TagName="ChairBoxLinks" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link rel="stylesheet" title="Standard" href="ContentFlow/contentflow.css" type="text/css" media="screen" />
     <script language="javascript" type="text/javascript" src="ContentFlow/contentflow.js" load="slideshow">
@@ -59,13 +61,7 @@
         </SelectParameters>
     </asp:ObjectDataSource>
     
-    <div id="ChairBoxLinks">
-        <div class="ChairBoxLink" onclick="window.location='music.aspx'" style="background-image:url(Images/Music170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='movies.aspx'" style="background-image:url(Images/Film170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='comedy.aspx'" style="background-image:url(Images/Comedy170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='popculture.aspx'" style="background-image:url(Images/pop-culture170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='novelty.aspx'" style="background-image:url(Images/novelty170.png);"></div>
-    </div>
+    <uc1:ChairBoxLinks runat="server" ID="ChairBoxLinks1" />
     <div style="clear:both;min-height:50px;"></div>
 </asp:Content>
 

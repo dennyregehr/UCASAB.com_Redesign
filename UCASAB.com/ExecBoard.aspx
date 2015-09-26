@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Masterpages/MasterPage.master" AutoEventWireup="false" CodeFile="ExecBoard.aspx.vb" Inherits="ExecBoard" %>
 
+<%@ Register Src="~/UserControls/ChairBoxLinks.ascx" TagPrefix="uc1" TagName="ChairBoxLinks" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -11,59 +13,55 @@
     <div class="ExecBoardPage">
         <%--<asp:PlaceHolder ID="ph1" runat="server"></asp:PlaceHolder>--%>
         <div class="ExecBoardMember">
-            Brian Thompson<br/>
-            <img src="Images/brianThompson.jpg" /><br />
+            <img src="Images/scott.jackson.jpg" /><br />
+            Scott Jackson<br/>
             President
         </div>
         <div class="ExecBoardMember">
-            Patrick Moore<br/>
-            <img src="Images/patrickMoore.jpg" /><br />
+            <img src="Images/jorge.hernandez.jpg" /><br />
+            Jorge Hernandez<br/>
             Vice President
         </div>
         <div class="ExecBoardMember">
-            Pharon Williams<br/>
-            <img src="Images/pharonWilliams.jpg" /><br />
+            <img src="Images/bertita.barrientos.jpg" /><br />
+            Bertita Barrientos<br/>
+            Media
+        </div>
+        <div class="ExecBoardMember">
+            <img src="Images/kiera.smithton.jpg" /><br />
+            Kiera Smithton<br/>
+            Movies
+        </div>
+        <div class="ExecBoardMember">
+            <img src="Images/emilia.barrick.jpg" /><br />
+            Emilia Barrick<br/>
             Music
         </div>
         <div class="ExecBoardMember">
-            Scott Jackson<br/>
-            <img src="Images/scottJackson.jpg" /><br />
+            <img src="Images/seth.wilson.jpg" /><br />
+            Seth Wilson<br/>
             Comedy
         </div>
         <div class="ExecBoardMember">
-            Tamelah Redden<br/>
-            <img src="Images/tamelahRedden.jpg" /><br />
+            <img src="Images/dylan.kimery.jpg" /><br />
+            Dylan Kimery<br/>
             Novelty
         </div>
         <div class="ExecBoardMember">
-            Jorge Hernandez<br/>
-            <img src="Images/jorgeHernandez.jpg" /><br />
+            <img src="Images/javier.hernandez.jpg" /><br />
+            Javier Hernandez<br/>
             Pop Culture
         </div>
         <div class="ExecBoardMember">
-            Sydney Spradlin<br/>
-            <img src="Images/sydneySpradlin.jpg" /><br />
+            <img src="Images/jill.wulfenstein.jpg" /><br />
+            Jill Wulfenstein<br/>
             Graduate Assistant
-        </div>
-        <div class="ExecBoardMember">
-            Kendra Regehr<br/>
-            <img src="Images/director1.jpg" /><br />
-            Director
         </div>
     </div>    
 
     <br style="clear:both;" />
 
-    <div id="ChairBoxLinks">
-        <div class="ChairBoxLink" onclick="window.location='music.aspx'" style="background-image:url(Images/Music170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='movies.aspx'" style="background-image:url(Images/Film170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='comedy.aspx'" style="background-image:url(Images/Comedy170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='popculture.aspx'" style="background-image:url(Images/pop-culture170.png);"></div>
-        <div class="ChairBoxLink" onclick="window.location='novelty.aspx'" style="background-image:url(Images/novelty170.png);"></div>
-    </div>
+    <uc1:ChairBoxLinks runat="server" ID="ChairBoxLinks1" />
     <div style="clear:both;min-height:50px;"></div>
 
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="foot" Runat="Server">
-</asp:Content>
-
