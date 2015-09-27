@@ -15,7 +15,7 @@
     <div id="EventDetailContainer">
         <div style="clear:both;min-height:0;"></div>
         <uc1:EventDetailControl ID="EventDetailControl1" runat="server" />
-        <div style="clear:both;min-height:0px;"></div>
+        <div style="clear:both;min-height:0;"></div>
     </div>
 
     <uc3:ChairBoxLinks ID="ChairBoxLinksControl1" runat="server"/>

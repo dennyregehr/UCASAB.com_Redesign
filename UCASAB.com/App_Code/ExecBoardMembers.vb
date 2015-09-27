@@ -46,7 +46,7 @@ Public Class ExecBoardMembers
         End Get
     End Property
     Private _photoURL As String
-    Public ReadOnly Property PhotoURL() As String
+    Public ReadOnly Property PhotoUrl() As String
         Get
             Return _photoURL
         End Get
@@ -77,33 +77,42 @@ Public Class ExecBoardMembers
         End Get
     End Property
 
-    Public Sub New(ByVal ExecBoardMemberDataRow As DataRow)
+    Public Sub New(ByVal execBoardMemberDataRow As DataRow)
         With Me
-            ._position = SafeData(ExecBoardMemberDataRow("position"))
-            ._execMember = SafeData(ExecBoardMemberDataRow("execmember"))
-            ._fname = SafeData(ExecBoardMemberDataRow("fname"))
-            ._lname = SafeData(ExecBoardMemberDataRow("lname"))
-            ._email = SafeData(ExecBoardMemberDataRow("email"))
-            ._phone1 = SafeData(ExecBoardMemberDataRow("phone1"))
-            ._phone2 = SafeData(ExecBoardMemberDataRow("phone2"))
-            ._photoURL = SafeData(ExecBoardMemberDataRow("photourl"))
-            ._serviceDates = SafeData(ExecBoardMemberDataRow("servicedates"))
-            ._positionTitle = SafeData(ExecBoardMemberDataRow("positionTitle"))
-            ._committeeDescription = SafeData(ExecBoardMemberDataRow("committeeDescription"))
-            ._orderForExecBoardPage = ExecBoardMemberDataRow("orderForExecBoardPage")
+            ._position = SafeData(execBoardMemberDataRow("position"))
+            ._execMember = SafeData(execBoardMemberDataRow("execmember"))
+            ._fname = SafeData(execBoardMemberDataRow("fname"))
+            ._lname = SafeData(execBoardMemberDataRow("lname"))
+            ._email = SafeData(execBoardMemberDataRow("email"))
+            ._phone1 = SafeData(execBoardMemberDataRow("phone1"))
+            ._phone2 = SafeData(execBoardMemberDataRow("phone2"))
+            ._photoURL = SafeData(execBoardMemberDataRow("photourl"))
+            ._serviceDates = SafeData(execBoardMemberDataRow("servicedates"))
+            ._positionTitle = SafeData(execBoardMemberDataRow("positionTitle"))
+            ._committeeDescription = SafeData(execBoardMemberDataRow("committeeDescription"))
+            ._orderForExecBoardPage = CType(execBoardMemberDataRow("orderForExecBoardPage"), Integer)
         End With
     End Sub
 
-    Private Function SafeData(ByVal DataItem As Object) As String
-        Return IIf(IsDBNull(DataItem), String.Empty, DataItem)
+    Private Function SafeData(ByVal dataItem As Object) As String
+        Return CType(IIf(IsDBNull(dataItem), String.Empty, dataItem), String)
     End Function
 
-    Public Shadows ReadOnly Property ToString()
+    Public Shadows ReadOnly Property ToString() As String
         Get
             Return String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}",
-                Me.CommitteeDescription, Me.Email, Me.ExecMember, Me.FirstName, Me.LastName,
-                Me.OrderForExecBoardPage, Me.Phone1, Me.Phone2, Me.PhotoURL, Me.Position,
-                Me.PositionTitle, Me.ServiceDates)
+                                 CommitteeDescription,
+                                 Email,
+                                 ExecMember,
+                                 FirstName,
+                                 LastName,
+                                 OrderForExecBoardPage,
+                                 Phone1,
+                                 Phone2,
+                                 PhotoUrl,
+                                 Position,
+                                 PositionTitle,
+                                 ServiceDates)
         End Get
     End Property
 

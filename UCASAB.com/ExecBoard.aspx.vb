@@ -11,7 +11,7 @@ Partial Class ExecBoard
         '    ph1.Controls.Add(
         '        New LiteralControl(
         '            String.Format("<div class=""ExecBoardMember"">{0}<br/><img src='{1}' /><br />{2}<br /></div>",
-        '            member.ExecMember, member.PhotoURL, member.PositionTitle)
+        '            member.ExecMember, member.PhotoUrl, member.PositionTitle)
         '        )
         '    )
         '    'ph1.Controls.Add(New LiteralControl(member.ToString() & "<br />"))
